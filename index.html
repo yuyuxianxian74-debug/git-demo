@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>简约工作台</title>
+	<style>
+		* { box-sizing: border-box; }
+		body { margin: 0; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #202938; background: #f5f7fb; }
+		.topbar { height: 68px; padding: 0 7%; display: flex; align-items: center; justify-content: space-between; background: #fff; border-bottom: 1px solid #e9edf3; }
+		.brand { display: flex; align-items: center; gap: 11px; font-size: 18px; font-weight: 700; }
+		.brand-mark { width: 34px; height: 34px; display: grid; place-items: center; color: #fff; background: #5865e8; border-radius: 10px; }
+		.profile { display: flex; align-items: center; gap: 10px; color: #687386; font-size: 14px; }
+		.avatar { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; color: #5865e8; background: #edf0ff; font-weight: 700; }
+		main { width: min(1060px, 86%); margin: 64px auto; }
+		.eyebrow { margin: 0 0 12px; color: #5865e8; font-size: 13px; font-weight: 700; letter-spacing: 1px; }
+		h1 { margin: 0; font-size: clamp(30px, 5vw, 42px); letter-spacing: -1px; }
+		.intro { margin: 12px 0 34px; color: #788397; font-size: 16px; }
+		.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+		.card { min-height: 190px; padding: 24px; background: #fff; border: 1px solid #e9edf3; border-radius: 16px; box-shadow: 0 8px 24px rgba(31,48,82,.04); transition: transform .2s, box-shadow .2s; }
+		.card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(31,48,82,.09); }
+		.icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 22px; border-radius: 12px; background: #f0f2ff; font-size: 20px; }
+		.card h2 { margin: 0 0 8px; font-size: 17px; }
+		.card p { margin: 0; color: #7d8798; font-size: 14px; line-height: 1.7; }
+		.button { display: inline-block; margin-top: 34px; padding: 12px 20px; color: #fff; background: #5865e8; border-radius: 9px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background .2s; }
+		.button:hover { background: #4652d0; }
+		@media (max-width: 700px) { .topbar { padding: 0 6%; } main { margin: 42px auto; } .cards { grid-template-columns: 1fr; gap: 14px; } .card { min-height: 160px; } .icon { margin-bottom: 16px; } }
+	</style>
+</head>
+<body>
+	<header class="topbar">
+		<div class="brand"><span class="brand-mark">✦</span><span>轻简工作台</span></div>
+		<div class="profile"><span>欢迎回来</span><span class="avatar">林</span></div>
+	</header>
+	<main>
+		<p class="eyebrow">YOUR WORKSPACE</p>
+		<h1>早上好，开始今天的工作吧。</h1>
+		<p class="intro">把想法整理好，让每一步都更简单。</p>
+		<section class="cards" aria-label="快捷入口">
+			<article class="card"><div class="icon">📝</div><h2>我的笔记</h2><p>记录灵感与想法，随时回顾重要内容。</p></article>
+			<article class="card"><div class="icon">✅</div><h2>任务清单</h2><p>梳理待办事项，专注完成每一个目标。</p></article>
+			<article class="card"><div class="icon">📊</div><h2>数据概览</h2><p>快速了解近期进展，掌握工作节奏。</p></article>
+		</section>
+		<a class="button" href="#">创建新项目　→</a>
+	</main>
+</body>
+</html>
